@@ -4,7 +4,7 @@
  *
  * This plugin transliterates filenames on upload via MODX filemanager.
  * It should be bent to the OnFileManagerUpload event.
- * Project page: https://github.com/TriAnMan
+ * Project page: https://github.com/TriAnMan/filetranslit
  */
 $currentdoc = $modx->newObject('modResource');
 foreach ($files as &$file) {
