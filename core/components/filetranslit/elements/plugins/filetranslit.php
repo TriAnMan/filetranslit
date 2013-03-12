@@ -13,8 +13,13 @@ foreach ($files as &$file) {
 
 		//file rename logic
 		if ($file['name'] !== $newName) {
-			//delete file if there is one with new name
-			$source->removeObject($directory . $newName);
+			$arDirFiles = $source->getObjectsInContainer($directory);
+			foreach ($arDirFiles as &$dirFile){
+				if($dirFile['name']===$newName){
+					//delete file if there is one with new name
+					$source->removeObject($directory . $newName);
+				}
+			}
 			//transliterate uploaded file
 			$source->renameObject($directory . $file['name'], $newName);
 		}

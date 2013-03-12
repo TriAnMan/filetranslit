@@ -5,7 +5,7 @@ set_time_limit(0); /* makes sure our script doesnt timeout */
 /* version info */
 define('PKG_NAME','filetranslit');
 define('PKG_NAME_LOWER','filetranslit');
-define('PKG_VERSION','0.1.1');
+define('PKG_VERSION','0.1.2');
 define('PKG_RELEASE','pl');
 
 $root = dirname(dirname(__FILE__)).'/';
@@ -64,8 +64,8 @@ $builder->putVehicle($vehicle);
 
 $builder->setPackageAttributes(array(
 	'license' => file_get_contents($sources['docs'] . 'gpl-2.0.txt'),
-	'readme' => "This plugin transliterates filenames on upload via MODX filemanager.\nIt should be bent to the OnFileManagerUpload event.",
-	'changelog' => "v0.1.1 - First release",
+	'readme' => file_get_contents($sources['docs'] . 'readme.txt'),
+	'changelog' => file_get_contents($sources['docs'] . 'changelog.txt'),
 ));
 
 $builder->pack();

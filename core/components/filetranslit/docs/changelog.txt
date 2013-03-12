@@ -1,0 +1,5 @@
+v0.1.2
+Fix: MODX 2.2.6-pl generates an error while uploading in some cases.
+Add: More friendly docs.
+
+v0.1.1 - First release
