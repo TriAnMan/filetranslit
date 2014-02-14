@@ -1,4 +1,7 @@
-v0.1.2
+v0.1.2-pl2
+Fix: Translate plugin description
+
+v0.1.2-pl1
 Fix: MODX 2.2.6-pl generates an error while uploading in some cases.
 Add: More friendly docs.
 

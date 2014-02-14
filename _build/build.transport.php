@@ -1,4 +1,12 @@
 <?php
+/**
+ * Build transport package
+ *
+ * Use: php -f build.transport.php
+ *
+ * @package filetranslit
+ * @subpackage build
+ */
 $tstart = microtime(true);
 set_time_limit(0); /* makes sure our script doesnt timeout */
 
@@ -6,7 +14,7 @@ set_time_limit(0); /* makes sure our script doesnt timeout */
 define('PKG_NAME','filetranslit');
 define('PKG_NAME_LOWER','filetranslit');
 define('PKG_VERSION','0.1.2');
-define('PKG_RELEASE','pl');
+define('PKG_RELEASE','pl2');
 
 $root = dirname(dirname(__FILE__)).'/';
 $sources= array (
@@ -34,7 +42,7 @@ $builder->registerNamespace(PKG_NAME_LOWER,false,true,'{core_path}components/'.P
 $plugin = $modx->newObject('modPlugin');
 $plugin->set('id',1);
 $plugin->set('name','fileTranslit');
-$plugin->set('description','Плагин автоматически транслитерирует имена файлов при загрузке.');
+$plugin->set('description','This plugin transliterates file names automatically on upload.');
 $plugin->set('plugincode', file_get_contents($sources['source_plugins'] . '/filetranslit.php'));
 $event = $modx->newObject('modPluginEvent');
 $event->fromArray(array(

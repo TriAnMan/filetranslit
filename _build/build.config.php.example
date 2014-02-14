@@ -1,0 +1,9 @@
+<?php
+/**
+ * Define the MODX path constants that necessary for package build
+ *
+ * @package filetranslit
+ * @subpackage build
+ */
+define('MODX_CORE_PATH', 'C:/PATH_TO_YOUR/htdocs/core/');
+define('MODX_CONFIG_KEY','config');
